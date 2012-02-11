@@ -1,0 +1,175 @@
+#sphere {
+width: 100px;
+height: 100px;
+margin: 200px auto;
+-webkit-perspective: 800;
+}
+
+.container {
+width: 100px;
+height: 100px;
+-webkit-transition: -webkit-transform 200ms linear;
+-webkit-transform-style: preserve-3d;
+}
+
+.container > ul {
+-webkit-transform-style: preserve-3d;
+width: 100%;
+height: 100%;
+position: absolute;
+}
+
+.container li {
+width: 98px;
+height: 98px;
+position: absolute;
+display: block;
+background: #000;
+border: 1px solid #fff;
+opacity: 0.1;
+border-radius: 50px;
+}
+
+/* Different spheres */
+/*************************************************/
+
+/* Square */
+
+#sphere.square li {
+border-radius: 0;
+}
+
+/* Kaleidoscope */
+
+#sphere.kaleidoscope li {
+opacity: 0.9;
+-webkit-animation: borderRadius 5s linear infinite alternate;
+}
+
+/* Eye */
+
+#sphere.eye li {
+opacity: 0.5;
+background: #fff;
+}
+
+#sphere.eye li:nth-child(7),
+#sphere.eye li:nth-child(8),
+#sphere.eye li:nth-child(6) {
+background: #000;
+opacity: 1;
+}
+
+/* Single */
+
+#sphere.single ul:nth-child(n+2) {
+opacity: 0;
+}
+
+
+/* Contact */
+
+#sphere.contact ul {
+opacity: 0;
+}
+
+#sphere.contact ul:nth-child(1),
+#sphere.contact ul:nth-child(4) {
+opacity: 0.8;
+}
+
+#sphere.contact .rotator {
+-webkit-animation: spinHorizontal 2s linear infinite;
+}
+
+
+#sphere.contact ul:nth-child(1) {
+-webkit-animation: spinVerticalReverse 5s linear infinite;
+}
+
+#sphere.contact ul:nth-child(4) {
+-webkit-animation: spinVertical 5s linear infinite;
+}
+
+.contact .rotator {
+-webkit-transition: -webkit-transform 500ms linear;
+-webkit-transform-style: preserve-3d;
+}
+
+/* Half */
+
+#sphere.half li {
+background: #000;
+}
+
+#sphere.half li:nth-child(n+12),
+#sphere.half ul:nth-child(n+4) li:nth-child(1) {
+display: none;
+}
+
+/* Animations */
+/*************************************************/
+
+@-webkit-keyframes spinHorizontal {
+  from {
+  	-webkit-transform: rotateY(0deg);
+  }
+  to {
+  	-webkit-transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes spinVertical {
+  from {
+  	-webkit-transform: rotateX(0deg);
+  }
+  to {
+  	-webkit-transform: rotateX(360deg);
+  }
+}
+
+@-webkit-keyframes spinVerticalReverse {
+  from {
+  	-webkit-transform: rotateX(360deg);
+  }
+  to {
+  	-webkit-transform: rotateX(0deg);
+  }
+}
+
+
+@-webkit-keyframes borderRadius {
+  from {
+  	border-radius: 5px;
+  }
+  to {
+  	border-radius: 50px;
+  }
+}
+
+.test p {
+text-align: center;
+}
+
+#controls {
+position: absolute;
+left: 20px;
+top: 115px;
+}
+
+#controls fieldset {
+border: 1px dotted #000;
+padding: 0.5em 1em 0 0.5em;
+}
+
+#controls label {
+font-weight: normal;
+}
+
+#controls div {
+margin: 0 0 0.5em;
+}
+
+#controls input {
+vertical-align: baseline;
+}

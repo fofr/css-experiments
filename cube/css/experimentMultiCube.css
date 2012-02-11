@@ -1,0 +1,95 @@
+/* 
+Multi Cube Experiments
+Date: 30th April 2009
+Author: Paul Hayes
+*/
+
+.cube {
+position: fixed;
+left: 50%;
+top: 300px;
+}
+
+.cube p {
+line-height: 14px;
+font-size: 12px;
+}
+
+.cube h2 {
+font-weight: bold;
+}
+
+.cube.two {
+top: 416px;
+left: 50%;
+margin-left: -200px;
+}
+
+.cube.three {
+top: 532px;
+left: 50%;
+margin-left: -400px;
+}
+
+.rightFace,
+.leftFace,
+.topFace div {
+padding: 10px;
+width: 180px;
+height: 180px;
+}
+
+.rightFace,
+.leftFace,
+.topFace {
+position: absolute;
+}
+
+.cube:hover .rightFace,
+.cube:hover .leftFace,
+.cube:hover .topFace div {
+background-color: #ffc;
+}
+
+.cube:hover .rightFace:hover,
+.cube:hover .leftFace:hover,
+.cube:hover .topFace:hover div {
+background-color: #ffa;
+}
+
+.leftFace {
+-webkit-transform: skew(0deg, 30deg);
+-moz-transform: skew(0deg, 30deg);
+background-color: #ccc;
+}
+
+.rightFace {
+-webkit-transform: skew(0deg, -30deg);
+-moz-transform: skew(0deg, -30deg);
+background-color: #ddd;
+left: 200px;
+}
+
+.topFace div {	
+-webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+-moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+background-color: #eee;
+font-size: 0.862em;
+}
+
+.topFace {
+-webkit-transform: rotate(60deg);
+-moz-transform: rotate(60deg);
+top: -158px;
+left: 100px;	
+}
+
+/* Optional WebKit Animations */
+
+.cube {
+-webkit-transition: -webkit-transform 1s linear;
+}
+
+.cube:hover {
+-webkit-transform: translate(202px, 115px);
+}

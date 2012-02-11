@@ -1,0 +1,118 @@
+/* 
+Cube Experiment
+Date: 26th March 2009
+Author: Paul Hayes
+*/
+
+.cube {
+position: absolute;
+left: 50%;
+top: 300px;
+margin-left: -200px;
+}
+
+.cube p {
+line-height: 14px;
+font-size: 12px;
+}
+
+.cube h2 {
+font-weight: bold;
+}
+
+.rightFace,
+.leftFace,
+.topFace div {
+padding: 10px;
+width: 180px;
+height: 180px;
+}
+
+.rightFace,
+.leftFace,
+.topFace {
+position: absolute;
+}
+
+.leftFace {
+-webkit-transform: skew(0deg, 30deg);
+-moz-transform: skew(0deg, 30deg);
+background-color: #ccc;
+}
+
+.rightFace {
+-webkit-transform: skew(0deg, -30deg);
+-moz-transform: skew(0deg, -30deg);
+background-color: #ddd;
+left: 200px;
+}
+
+.topFace div {	
+-webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+-moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+background-color: #eee;
+font-size: 0.862em;
+}
+
+.topFace {
+-webkit-transform: rotate(60deg);
+-moz-transform: rotate(60deg);
+top: -158px;
+left: 100px;	
+}
+
+/* Optional WebKit Animations */
+/*
+
+.rightFace {
+-webkit-transition: -webkit-transform 1s linear;
+}
+
+.leftFace {
+-webkit-transition: -webkit-transform 1s linear;	
+}
+
+.topFace {
+-webkit-transition: -webkit-transform 1s linear;
+}
+
+.cube:hover .rightFace {
+-webkit-transform: skew(0deg, -30deg) translate(100px, 100px);
+}
+
+.cube:hover .leftFace {
+-webkit-transform: skew(0deg, 30deg) translate(-100px, 100px);
+}
+
+.cube:hover .topFace {
+-webkit-transform: rotate(60deg) translate(-50px, -50px);
+}
+
+/* Video */
+.cube video {
+left: -20px;
+top: -20px;
+position: relative;
+}
+
+.cube div.rightFace video {
+left: -301px;
+top: -35px;
+opacity: 0.9;
+}
+
+.cube div.leftFace video {
+opacity: 0.7;
+top: -35px;
+left: -100px;
+}
+
+.cube div.rightFace,
+.cube div.leftFace {
+overflow: hidden;
+}
+
+.cube div.topFace.video div {
+background-color: #000;
+color: #fff;
+}

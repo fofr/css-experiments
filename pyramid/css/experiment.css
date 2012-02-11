@@ -1,0 +1,54 @@
+#pyramid {
+position: relative;
+margin: 100px auto;
+height: 500px;
+width: 100px;
+-webkit-transform-style: preserve-3d;
+-webkit-animation: spin 5s linear infinite;
+-webkit-transform-origin: -20px 0 10px;
+}
+
+@-webkit-keyframes spin {
+  from {
+  	-webkit-transform: rotateY(0deg) rotateX(-20deg);
+  }
+  to {
+  	-webkit-transform: rotateY(360deg) rotateX(-20deg);
+  }
+}
+
+
+#pyramid > div {
+position: absolute;
+border-color: transparent transparent transparent rgba(50, 50, 50, 0.5);
+border-style: solid; 
+/* border-radius: 3px; */
+border-width: 200px 0 200px 346px;
+-webkit-transform-origin: 0 0;
+}
+
+/* Put some text on each face */
+#pyramid > div:after {
+position: absolute;
+content: "Triangle";
+color: #fff;
+left: -250px;
+text-align: center;
+}
+
+#pyramid > div:first-child  {
+-webkit-transform: rotateY(-19.5deg);
+}
+
+#pyramid > div:nth-child(2) {
+-webkit-transform: rotateY(90deg) rotateZ(60deg);
+}
+
+#pyramid > div:nth-child(3) {
+-webkit-transform: rotateX(60deg) rotateY(19.5deg);
+}
+
+#pyramid > div:nth-child(4) {
+-webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px);
+-webkit-transform-origin: 0 0 -326px;
+}

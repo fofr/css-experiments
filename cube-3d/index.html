@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Article: http://www.paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/ -->
+	<!-- Demo: http://www.paulrhayes.com/experiments/cube-3d/index.html -->
+	<!-- Originally posted: 17th July 2009 -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Paul Hayes: Experiment: 3D CSS cube with rotating navigation</title>
+	<meta name="author" content="Paul Hayes" />
+	<link rel="stylesheet" href="../experiment-styles.css" />
+
+			
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="experiment">
+	<div id="wrapper">
+		<p id="learn">
+			This is a demo, <a href="http://www.paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/">learn how it works</a>.
+		</p>
+<style>
+	#experiment {
+	  -webkit-perspective: 800; 
+	  -webkit-perspective-origin: 50% 200px;
+	}
+
+	#cube {
+	  position: relative;
+	  margin: 100px auto 0;
+	  height: 400px;
+	  width: 400px;
+	  -webkit-transition: -webkit-transform 2s linear;
+	  -webkit-transform-style: preserve-3d;
+	}
+
+	.face {
+	  position: absolute;
+	  height: 360px;
+	  width: 360px;
+	  padding: 20px;
+	  background-color: rgba(50, 50, 50, 0.7);
+	  font-size: 27px;
+	  line-height: 1em;
+	  color: #fff;
+	  border: 1px solid #555;
+	  -webkit-border-radius: 3px;
+	}   
+
+	#cube .one  {
+	  -webkit-transform: rotateX(90deg) translateZ(200px);
+	}
+
+	#cube .two {
+	  -webkit-transform: translateZ(200px);
+	}
+
+	#cube .three {
+	  -webkit-transform: rotateY(90deg) translateZ(200px);
+	}
+
+	#cube .four {
+	  -webkit-transform: rotateY(180deg) translateZ(200px);
+	}
+
+	#cube .five {
+	  -webkit-transform: rotateY(-90deg) translateZ(200px);
+	}
+
+	#cube .six {
+	  -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px) ;
+	}
+</style>
+
+<div id="experiment">	
+	<div id="cube">
+        <div class="face one">
+			One face
+        </div>
+        <div class="face two">
+			Up, down, left, right
+        </div>
+        <div class="face three">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="face four">
+			New forms of navigation are fun.
+        </div>
+        <div class="face five">
+			Rotating 3D cube
+        </div>
+        <div class="face six">
+			<img src="images/sonic.gif" />
+        </div>
+    </div>	
+</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+			<script>
+		var xAngle = 0, yAngle = 0;
+$('body').keydown(function(evt) {
+	switch(evt.keyCode) {
+		case 37: // left
+			yAngle -= 90;
+			break;
+		
+		case 38: // up
+			xAngle += 90;				
+			break;
+		
+		case 39: // right
+			yAngle += 90;
+			break;
+			
+		case 40: // down
+			xAngle -= 90;
+			break;
+	};
+	document.getElementById('cube').style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+});	</script>
+	</body>
+</html>

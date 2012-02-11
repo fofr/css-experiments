@@ -1,0 +1,55 @@
+/* 
+Clock Experiment
+Date: 24th March 2009
+Author: Paul Hayes
+ */
+ 
+body.experiment {
+background: #fff;
+}
+ 
+.start {
+text-align: center;
+font-size: 2em;
+font-weight: bold;
+margin: 5em;
+}
+
+#clock {
+position: relative;
+width: 378px;
+height: 378px;
+background-image: url('../images/clockFace.png');
+left: 50%;
+margin: 5em 0 0 -189px;
+}
+
+#clock div {
+position: absolute;
+}
+
+
+/* The magic */
+#clock img[src*='second'] {
+-webkit-transition: -webkit-transform 600000s linear;
+}
+
+#clock:target img[src*='second'] {
+-webkit-transform: rotate(3600000deg);
+}
+
+#clock img[src*='minute'] {
+-webkit-transition: -webkit-transform 360000s linear;
+}
+
+#clock:target img[src*='minute'] {
+-webkit-transform: rotate(36000deg);
+}
+
+#clock img[src*='hour'] {
+-webkit-transition: -webkit-transform 216000s linear;
+}
+
+#clock:target img[src*='hour'] {
+-webkit-transform: rotate(360deg);
+}

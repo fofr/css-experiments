@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Article: http://www.paulrhayes.com/2011-03/css-modal/ -->
+	<!-- Demo: http://www.paulrhayes.com/experiments/modal/ -->
+	<!-- Originally posted: 17th March 2011 -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Paul Hayes: Experiment: CSS Modal with Animation</title>
+	<meta name="author" content="Paul Hayes" />
+	<link rel="stylesheet" href="../experiment-styles.css" />
+
+	<link rel="stylesheet" href="css/experiment.css" />		
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="experiment">
+	<div id="wrapper">
+		<p id="learn">
+			This is a demo, <a href="http://www.paulrhayes.com/2011-03/css-modal/">learn how it works</a>.
+		</p>
+<a href="#example" class="openModal">Open modal</a>
+<a href="#example2" class="openModal">Open a different modal</a>
+<aside id="example" class="modal">
+	<div>
+		<h2>Modal box</h2>
+		<p>The modal animation is hardware accelerated on Safari and iOS, which gives notable performance improvements. The animations are available in Chrome but will feel more sluggish. Firefox will see the opacity transition but not the bounce or minimise animation as it <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=435442">doesn't yet support @keyframe</a>.</p>
+		<a href="#close" title="Close">Close</a>
+	</div>
+</aside>
+<aside id="example2" class="modal">
+	<div>
+		<h2>Another modal box</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<a href="#close" title="Close">Close</a>
+	</div>
+</aside>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		</body>
+</html>

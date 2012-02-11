@@ -1,0 +1,216 @@
+/* Reset */
+/*************************************************/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, b, i, hgroup, menu, nav, section, time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+
+ol, ul {
+list-style: none;
+}
+
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+caption, th, td {
+text-align: left;
+font-weight: normal;
+}
+
+blockquote, q {
+quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section {
+display: block;
+}
+
+ins, mark {
+background-color: #ff9;
+text-decoration: none;
+}
+
+button {
+overflow: visible;
+font-size: 1em;
+padding: 0;
+}
+
+input, select {
+vertical-align: middle;
+}
+
+/* Tools */
+/***********************/
+
+.clearfix:after,
+.clearfixItems li:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+.clear {
+clear: both;
+}
+
+.ir, .sprite {
+text-indent: -9999px;
+overflow: hidden; /* Stop focus outline issues */
+}
+
+del, .strike {
+text-decoration: line-through;
+}
+
+abbr[title], dfn[title], acronym {
+border-bottom:1px dotted #000;
+cursor:help;
+}
+
+button {
+overflow: visible;
+font-size: 1em;
+padding: 0;
+}
+
+.hide {
+display: none;
+}
+
+strong,.strong,b,th,dt,label {
+font-weight: bold;
+}
+
+i, em, .italic, blockquote, cite, q {
+font-style: italic;
+}
+
+.norm, strong span, label span, h1 span, h2 span, h3 span {
+font-weight: normal;
+}
+
+blockquote em, blockquote cite, blockquote i {
+font-variant: normal; 
+}
+
+small, .small {
+font-size: smaller;
+}
+
+input.submit, button, a, label {
+cursor: pointer;
+}
+
+legend {
+position: absolute;
+z-index: -1;
+font-size: 0;
+height: 0;
+color: transparent;
+}
+
+/* Typography */
+/***********************/
+
+body {
+font-size: 1em;
+line-height: 1.5em;  /* 16px/24px default */
+color: #666;
+background: #faf7ee;
+font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+font-weight: 200;
+}
+
+textarea, .sans {
+font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-weight: 200;
+}
+
+p, ul, ol, dl, table, address, .r {
+margin-bottom: 24px;
+line-height: 24px;
+}
+
+ul ul, ol ol, ol ul, ul ol, dl dl, dl ul, dl ol, ul dl, ol dl {
+margin-bottom: 0;
+}
+
+/* Grid */
+/*************************************************/
+
+.g1 { width:60px; }
+.g2 { width:140px; }
+.g3 { width:220px; }
+.g4 { width:300px; }
+.g5 { width:380px; }
+.g6 { width:460px; }
+.g7 { width:540px; }
+.g8 { width:620px; }
+.g9 { width:700px; }
+.g10 { width:780px; }
+.g11 { width:860px; }
+.g12 { width:940px; }
+
+.g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8, .g9, .g10, .g11, .g12, .g {
+margin: 0 10px;
+overflow: hidden;
+float: left;
+display: inline;
+}
+
+.r, .grid {
+width: 960px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.grid {
+overflow: visible;
+}
+
+a {
+color: #333;
+}
+
+a:visited {
+font-weight: normal;
+}
+
+.strong a:visited,
+a.strong:visited {
+font-weight: bold;
+}
+
+a:hover,
+a:focus,
+a:active {
+color: #000;
+text-decoration: underline;
+}
+
+.experiment #learn {
+text-align: center;
+background: #fff;
+margin-bottom: 24px;
+padding: 12px 0;
+border-bottom: 1px solid #ccc;
+}

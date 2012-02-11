@@ -1,0 +1,52 @@
+/* 
+CSS3 Accordion Experiment
+Date: 25th June 2009
+Author: Paul Hayes
+*/
+ 
+.accordion {
+ 	background: #eee;
+ 	border: 1px solid #999;
+	padding: 0 1em 24px;
+	width: 500px;
+	margin: 2em auto;
+}
+
+.accordion h2 {
+	margin: 12px 0;
+}
+ 
+.accordion .section {
+ 	border-bottom: 1px solid #ccc;
+	padding: 0 1em;
+	background: #fff;
+}
+ 
+.accordion h3 a {
+	display: block;
+	font-weight: normal;
+	padding: 1em 0;
+}
+
+.accordion h3 a:hover {
+	text-decoration: none;
+}
+ 
+.accordion h3 + div {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 0.3s ease-in;
+}
+
+.accordion :target h3 a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.accordion :target h3 + div {
+	height: 100px;
+}
+
+.accordion .section.large:target h3 + div {
+	overflow: auto;
+}
