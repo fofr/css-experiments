@@ -12,6 +12,10 @@ right: 0;
 bottom: 0;
 position: fixed;
 -webkit-transition: left 300s linear;
+-moz-transition: left 300s linear;
+-o-transition: left 300s linear;
+-ms-transition: left 300s linear;
+transition: left 300s linear;
 }
 
 #experiment:target #background {

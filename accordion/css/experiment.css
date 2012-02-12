@@ -36,6 +36,10 @@ Author: Paul Hayes
 	height: 0;
 	overflow: hidden;
 	-webkit-transition: height 0.3s ease-in;
+	-moz-transition: height 0.3s ease-in;
+	-o-transition: height 0.3s ease-in;
+	-ms-transition: height 0.3s ease-in;
+	transition: height 0.3s ease-in;
 }
 
 .accordion :target h3 a {

@@ -1,5 +1,19 @@
 $(function(){
 	
+	var el = document.createElement('div'),
+		transformProps = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' '),
+		transformProp = support(transformProps),
+		transitionDuration = 'transitionDuration WebkitTransitionDuration MozTransitionDuration OTransitionDuration msTransitionDuration'.split(' '),
+		transitionDurationProp = support(transitionDuration);
+		
+	function support(props) {
+		for(var i = 0, l = props.length; i < l; i++) {
+			if(typeof el.style[props[i]] !== "undefined") {
+				return props[i];
+			}
+		}
+	}
+
 	var mouse = { 
 	    	start : {}
 	    },
@@ -8,15 +22,13 @@ $(function(){
 	    	x: -10, 
 			y: 20, 
 			el: $('#cube')[0],
-/* 			bee: $('.pX img')[0], */
 			move: function(coords) {
 				if(coords) {
 					if(typeof coords.x === "number") this.x = coords.x;
 					if(typeof coords.y === "number") this.y = coords.y;
 				}
-	
-/* 				this.bee.style.webkitTransform = "rotateX(-"+this.x+"deg) rotateY(-"+this.y+"deg)"; */
-				this.el.style.webkitTransform = "rotateX("+this.x+"deg) rotateY("+this.y+"deg)";
+
+				this.el.style[transformProp] = "rotateX("+this.x+"deg) rotateY("+this.y+"deg)";
 			},
 			reset: function() {
 				this.move({x: 0, y: 0});
@@ -25,7 +37,7 @@ $(function(){
 		
 	viewport.duration = function() {
 		var d = touch ? 50 : 500;
-		viewport.el.style.webkitTransitionDuration = d + "ms";
+		viewport.el.style[transitionDurationProp] = d + "ms";
 		return d;
 	}();
 	
@@ -112,7 +124,7 @@ $(function(){
 	
 	/* Just for fun */
 	if(!touch) {
-		$('#cube > div').eq(2).html('<object width="360" height="360"><param name="movie" value="http://www.youtube.com/v/01hUyIrubWE?fs=1&amp;hl=en_GB&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/01hUyIrubWE?fs=1&amp;hl=en_GB&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="360" height="360"></embed></object>');
+		$('#cube > div').eq(2).html('<object width="360" height="360"><param name="movie" value="http://www.youtube.com/v/MY5PkidV1cM?fs=1&amp;hl=en_GB&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MY5PkidV1cM?fs=1&amp;hl=en_GB&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="360" height="360"></embed></object>');
 	}
 	
 });

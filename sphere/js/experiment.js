@@ -1,4 +1,16 @@
 $(function(){
+	
+	var el = document.createElement('div'),
+		transformProps = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' '),
+		transformProp = support(transformProps);
+	
+	function support(props) {
+		for(var i = 0, l = props.length; i < l; i++) {
+			if(typeof el.style[props[i]] !== "undefined") {
+				return props[i];
+			}
+		}
+	}
 
 	var $sphere = $('#sphere'),
 		sphere = {
@@ -25,11 +37,11 @@ $(function(){
 				for(i = 0; i < rounds; i++) {
 					$ul = $('<ul>');
 					xRotation = rotationPerRound * i;
-					$ul[0].style.webkitTransform = "rotateX("+ xRotation + "deg)";
+					$ul[0].style[transformProp] = "rotateX("+ xRotation + "deg)";
 					for(j = 0; j < panels; j++) {
 						$li = $('<li>');
 						yRotation = rotationPerPanel * j;
-						$li[0].style.webkitTransform = "rotateY("+ yRotation +"deg) translateZ("+ zTranslate +"px)";
+						$li[0].style[transformProp] = "rotateY("+ yRotation +"deg) translateZ("+ zTranslate +"px)";
 						$ul.append($li);
 					}
 					$container.append($ul);
@@ -49,7 +61,7 @@ $(function(){
 					if(typeof coords.x === "number") this.x = coords.x;
 					if(typeof coords.y === "number") this.y = coords.y;
 				}
-				this.el.style.webkitTransform = "rotateX("+this.x+"deg) rotateY("+this.y+"deg)";
+				this.el.style[transformProp] = "rotateX("+this.x+"deg) rotateY("+this.y+"deg)";
 			},
 			reset: function() {
 				this.move({x: 0, y: 0});

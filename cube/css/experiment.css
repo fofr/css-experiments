@@ -37,12 +37,18 @@ position: absolute;
 .leftFace {
 -webkit-transform: skew(0deg, 30deg);
 -moz-transform: skew(0deg, 30deg);
+-o-transform: skew(0deg, 30deg);
+-ms-transform: skew(0deg, 30deg);
+transform: skew(0deg, 30deg);
 background-color: #ccc;
 }
 
 .rightFace {
 -webkit-transform: skew(0deg, -30deg);
 -moz-transform: skew(0deg, -30deg);
+-o-transform: skew(0deg, -30deg);
+-ms-transform: skew(0deg, -30deg);
+transform: skew(0deg, -30deg);
 background-color: #ddd;
 left: 200px;
 }
@@ -50,6 +56,9 @@ left: 200px;
 .topFace div {	
 -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
 -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+-o-transform: skew(0deg, -30deg) scale(1, 1.16);
+-ms-transform: skew(0deg, -30deg) scale(1, 1.16);
+transform: skew(0deg, -30deg) scale(1, 1.16);
 background-color: #eee;
 font-size: 0.862em;
 }
@@ -57,6 +66,9 @@ font-size: 0.862em;
 .topFace {
 -webkit-transform: rotate(60deg);
 -moz-transform: rotate(60deg);
+-o-transform: rotate(60deg);
+-ms-transform: rotate(60deg);
+transform: rotate(60deg);
 top: -158px;
 left: 100px;	
 }

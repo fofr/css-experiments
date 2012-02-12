@@ -3,6 +3,7 @@ width: 100px;
 height: 100px;
 margin: 200px auto;
 -webkit-perspective: 800;
+-moz-perspective: 800;
 }
 
 .container {
@@ -10,10 +11,13 @@ width: 100px;
 height: 100px;
 -webkit-transition: -webkit-transform 200ms linear;
 -webkit-transform-style: preserve-3d;
+-moz-transition: -moz-transform 200ms linear;
+-moz-transform-style: preserve-3d;
 }
 
 .container > ul {
 -webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
 width: 100%;
 height: 100%;
 position: absolute;
@@ -44,6 +48,7 @@ border-radius: 0;
 #sphere.kaleidoscope li {
 opacity: 0.9;
 -webkit-animation: borderRadius 5s linear infinite alternate;
+-moz-animation: borderRadius 5s linear infinite alternate;
 }
 
 /* Eye */
@@ -80,20 +85,26 @@ opacity: 0.8;
 
 #sphere.contact .rotator {
 -webkit-animation: spinHorizontal 2s linear infinite;
+-moz-animation: spinHorizontal 2s linear infinite;
 }
 
 
 #sphere.contact ul:nth-child(1) {
 -webkit-animation: spinVerticalReverse 5s linear infinite;
+-moz-animation: spinVerticalReverse 5s linear infinite;
 }
 
 #sphere.contact ul:nth-child(4) {
 -webkit-animation: spinVertical 5s linear infinite;
+-moz-animation: spinVertical 5s linear infinite;
 }
 
 .contact .rotator {
 -webkit-transition: -webkit-transform 500ms linear;
 -webkit-transform-style: preserve-3d;
+
+-moz-transition: -moz-transform 500ms linear;
+-moz-transform-style: preserve-3d;
 }
 
 /* Half */
@@ -139,6 +150,44 @@ display: none;
 
 
 @-webkit-keyframes borderRadius {
+  from {
+  	border-radius: 5px;
+  }
+  to {
+  	border-radius: 50px;
+  }
+}
+
+
+@-moz-keyframes spinHorizontal {
+  from {
+  	-moz-transform: rotateY(0deg);
+  }
+  to {
+  	-moz-transform: rotateY(360deg);
+  }
+}
+
+@-moz-keyframes spinVertical {
+  from {
+  	-moz-transform: rotateX(0deg);
+  }
+  to {
+  	-moz-transform: rotateX(360deg);
+  }
+}
+
+@-moz-keyframes spinVerticalReverse {
+  from {
+  	-moz-transform: rotateX(360deg);
+  }
+  to {
+  	-moz-transform: rotateX(0deg);
+  }
+}
+
+
+@-moz-keyframes borderRadius {
   from {
   	border-radius: 5px;
   }

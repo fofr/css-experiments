@@ -24,6 +24,7 @@ pointer-events: none;
 .modal:target {
 opacity: 1;
 pointer-events: auto;
+/* at time of writing (Feb 2012), pointer-events not supported by Opera or IE */
 }
 
 /* Content */
@@ -35,22 +36,23 @@ margin: 10% auto;
 
 /* Default minimise animation */
 -webkit-animation: minimise 500ms linear;
+-moz-animation: minimise 500ms linear;
 
 /* Prettify */
 padding: 30px;
--moz-border-radius: 7px;
 border-radius: 7px;
--webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
--moz-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
 box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+background: #fff;
 background: -moz-linear-gradient(#fff, #ccc);
-background: -webkit-gradient(linear, right bottom, right top, color-stop(1, rgb(255,255,255)), color-stop(0.57, rgb(230,230,230)));
+background: -webkit-linear-gradient(#fff, #ccc);
+background: -o-linear-gradient(#fff, #ccc);
 text-shadow: 0 1px 0 #fff;
 }
 
 /* Override animation on modal open */
 .modal:target > div {
 -webkit-animation-name: bounce;
+-moz-animation-name: bounce;
 }
 
 .modal h2 {
@@ -61,19 +63,19 @@ padding: 0 0 20px;
 @-webkit-keyframes bounce {
   0% {
   	-webkit-transform: scale3d(0.1,0.1,1);
-  	-webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  	box-shadow: 0 3px 20px rgba(0,0,0,0.9);
   }
   55% {
   	-webkit-transform: scale3d(1.08,1.08,1);
-  	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0);
+  	box-shadow: 0 10px 20px rgba(0,0,0,0);
   }
   75% {
   	-webkit-transform: scale3d(0.95,0.95,1);
-  	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  	box-shadow: 0 0 20px rgba(0,0,0,0.9);
   }
   100% {
   	-webkit-transform: scale3d(1,1,1);
-  	-webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  	box-shadow: 0 3px 20px rgba(0,0,0,0.9);
   }
 }
 
@@ -83,6 +85,34 @@ padding: 0 0 20px;
   }
   100% {
   	-webkit-transform: scale3d(0.1,0.1,1);
+  }
+}
+
+@-moz-keyframes bounce {
+  0% {
+  	-moz-transform: scale3d(0.1,0.1,1);
+  	box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+  55% {
+  	-moz-transform: scale3d(1.08,1.08,1);
+  	box-shadow: 0 10px 20px rgba(0,0,0,0);
+  }
+  75% {
+  	-moz-transform: scale3d(0.95,0.95,1);
+  	box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  }
+  100% {
+  	-moz-transform: scale3d(1,1,1);
+  	box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+}
+
+@-moz-keyframes minimise {
+  0% {
+  	-moz-transform: scale3d(1,1,1);
+  }
+  100% {
+  	-moz-transform: scale3d(0.1,0.1,1);
   }
 }
 
@@ -119,10 +149,7 @@ font-weight: bold;
 background: #000;
 color: #fff;
 border: 3px solid #fff;
--moz-border-radius: 20px;
 border-radius: 20px;
--webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
--moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
@@ -144,19 +171,19 @@ width: 200px;
 background: #ccc;
 text-align: center;
 padding: 10px;
--moz-border-radius: 7px;
 border-radius: 7px;
+background: #fff;
 background: -moz-linear-gradient(#fff, #ddd);
-background: -webkit-gradient(linear, right top, right bottom, from(rgb(255,255,255)), to(rgb(230,230,230)));
+background: -webkit-linear-gradient(#fff, #ddd);
+background: -o-linear-gradient(#fff, #ddd);
 text-shadow: 0 1px 0 #fff;
 border: 1px solid rgba(0,0,0,0.1);
--webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
--moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
 a.openModal:hover,
 a.openModal:focus {
 background: -moz-linear-gradient(#fff, #ccc);
-background: -webkit-gradient(linear, right top, right bottom, from(rgb(255,255,255)), to(rgb(200,200,200)));
+background: -webkit-linear-gradient(#fff, #ccc);
+background: -o-linear-gradient(#fff, #ccc);
 }
