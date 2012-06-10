@@ -21,7 +21,7 @@ $(function(){
 	    viewport = {
 	    	x: -10, 
 			y: 20, 
-			el: $('#cube')[0],
+			el: $('.cube')[0],
 			move: function(coords) {
 				if(coords) {
 					if(typeof coords.x === "number") this.x = coords.x;
@@ -84,7 +84,7 @@ $(function(){
 				event.preventDefault();
 				// Get touch co-ords
 				event.originalEvent.touches ? event = event.originalEvent.touches[0] : null;
-				$('#viewport').trigger('move-viewport', {x: event.pageX, y: event.pageY});			
+				$('.viewport').trigger('move-viewport', {x: event.pageX, y: event.pageY});			
 			}			
 		});	
 		
@@ -93,7 +93,7 @@ $(function(){
 		});
 	});
 	
-	$('#viewport').bind('move-viewport', function(evt, movedMouse) {
+	$('.viewport').bind('move-viewport', function(evt, movedMouse) {
 	
 		// Reduce movement on touch screens
 		var movementScaleFactor = touch ? 4 : 1;
@@ -124,7 +124,7 @@ $(function(){
 	
 	/* Just for fun */
 	if(!touch) {
-		$('#cube > div').eq(2).html('<object width="360" height="360"><param name="movie" value="http://www.youtube.com/v/MY5PkidV1cM?fs=1&amp;hl=en_GB&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MY5PkidV1cM?fs=1&amp;hl=en_GB&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="360" height="360"></embed></object>');
+		$('.cube > div').eq(2).html('<object width="360" height="360"><param name="movie" value="http://www.youtube.com/v/MY5PkidV1cM?fs=1&amp;hl=en_GB&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MY5PkidV1cM?fs=1&amp;hl=en_GB&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="360" height="360"></embed></object>');
 	}
 	
 });

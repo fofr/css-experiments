@@ -1,18 +1,18 @@
-h2 {	
+h2 {
 margin-top: 0;
 }
 
-#viewport {
--webkit-perspective: 800; 
+.viewport {
+-webkit-perspective: 800;
 -webkit-perspective-origin: 50% 200px;
 -webkit-transform: scale(0.75,0.75);
 
--moz-perspective: 800; 
+-moz-perspective: 800;
 -moz-perspective-origin: 50% 200px;
 -moz-transform: scale(0.75,0.75);
 }
 
-#cube {
+.cube {
 position: relative;
 margin: 0 auto;
 height: 400px;
@@ -26,17 +26,17 @@ width: 400px;
 -moz-transform: rotateX(-10deg) rotateY(20deg);
 }
 
-#cube h2 {
+.cube h2 {
 color: #fff;
 padding-top: 0;
 margin-top: 0;
 }
 
-#cube a {
+.cube a {
 color: #fff;
 }
 
-#cube > div {
+.cube > div {
 position: absolute;
 height: 360px;
 width: 360px;
@@ -47,42 +47,42 @@ line-height: 1em;
 color: #fff;
 border: 1px solid #555;
 border-radius: 3px;
-}   
+}
 
-#cube > div:first-child  {
+.cube > div:first-child  {
 -webkit-transform: rotateX(90deg) translateZ(200px);
 -moz-transform: rotateX(90deg) translateZ(200px);
 }
 
-#cube > div:nth-child(2) {
+.cube > div:nth-child(2) {
 -webkit-transform: translateZ(200px);
 -moz-transform: translateZ(200px);
 }
 
-#cube > div:nth-child(3) {
+.cube > div:nth-child(3) {
 -webkit-transform: rotateY(90deg) translateZ(200px);
 -moz-transform: rotateY(90deg) translateZ(200px);
 text-align: center;
 }
 
-#cube > div:nth-child(4) {
+.cube > div:nth-child(4) {
 -webkit-transform: rotateY(180deg) translateZ(200px);
 -moz-transform: rotateY(180deg) translateZ(200px);
 }
 
-#cube > div:nth-child(5) {
+.cube > div:nth-child(5) {
 -webkit-transform: rotateY(-90deg) translateZ(200px);
 -moz-transform: rotateY(-90deg) translateZ(200px);
 }
 
-#cube > div:nth-child(5) p {
+.cube > div:nth-child(5) p {
 text-align: center;
 font-size: 2.77em;
 margin: 40px;
 line-height: 60px;
 }
 
-#cube > div:nth-child(6) {
+.cube > div:nth-child(6) {
 -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
 -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
 }
@@ -93,4 +93,25 @@ opacity: 0.5;
 
 object:hover {
 opacity: 1;
+}
+
+/* Zoom and blur experiment */
+/* As of June 10th 2012: filters are webkit only */
+/*************************************************/
+
+.zoom-wrapper {
+-webkit-animation: zoom-in 5s linear infinite alternate;
+-webkit-filter: blur(0);
+-webkit-transform-style: preserve-3d;
+}
+
+@-webkit-keyframes zoom-in {
+    from {
+        -webkit-transform: translateZ(-1000px);
+        -webkit-filter: blur(3px);
+    }
+    to {
+        -webkit-transform: translateZ(100px);
+        -webkit-filter: blur(0);
+    }
 }
