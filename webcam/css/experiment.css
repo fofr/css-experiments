@@ -1,0 +1,28 @@
+.transforming-content {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #fff;
+    padding: 30px;
+    background: rgba(0,0,0,0.8);
+    margin: 0 auto;
+
+    -webkit-transition: -webkit-transform 500ms;
+    -ms-transition: -ms-transform 500ms;
+    -o-transition: -o-transform 500ms;
+    transition: transform 500ms;
+}
+
+canvas.scale {
+    position: fixed;
+    border-radius: 5px;
+    bottom: 10px;
+    left: 10px;
+}
+
+canvas.mask {
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+}
