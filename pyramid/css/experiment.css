@@ -48,25 +48,25 @@ text-align: center;
 }
 
 #pyramid > div:first-child  {
-border-color: transparent transparent transparent rgba(22, 22, 22, 0.6);
+border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
 -webkit-transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
 -moz-transform:    rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
 }
 
 #pyramid > div:nth-child(2) {
-border-color: transparent transparent transparent rgba(166, 22, 22, 0.6);
+border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
 -webkit-transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
 -moz-transform:    rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
 }
 
 #pyramid > div:nth-child(3) {
-border-color: transparent transparent transparent rgba(166, 22, 22, 0.9);
+border-color: transparent transparent transparent rgba(50, 50, 50, 0.9);
 -webkit-transform: rotateX(60deg) rotateY(19.5deg);
 -moz-transform:    rotateX(60deg) rotateY(19.5deg);
 }
 
 #pyramid > div:nth-child(4) {
-border-color: transparent transparent transparent rgba(166, 22, 22, 0.8);
+border-color: transparent transparent transparent rgba(50, 50, 50, 0.8);
 -webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
 -moz-transform:    rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
 }
