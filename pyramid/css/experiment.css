@@ -23,7 +23,7 @@ width: 100px;
 
 @-moz-keyframes spin {
   from {
-    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);;
+    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
   to {
     -moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
