@@ -1,7 +1,3 @@
-body {
- font-family:calibri;
-}
-
 #pyramid {
 position: relative;
 margin: 100px auto;
@@ -21,16 +17,16 @@ width: 100px;
     -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
   to {
-  	-webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
 
 @-moz-keyframes spin {
   from {
-  	-moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);;
   }
   to {
-  	-moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    -moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
 
@@ -39,7 +35,7 @@ position: absolute;
 border-style: solid;
 border-width: 200px 0 200px 346px;
 -webkit-transform-origin: 0 0;
--moz-transform-origin: 0 0;
+-moz-transform-origin:    0 0;
 }
 
 /* Put some text on each face */
@@ -51,27 +47,26 @@ left: -250px;
 text-align: center;
 }
 
-
 #pyramid > div:first-child  {
 border-color: transparent transparent transparent rgba(22, 22, 22, 0.6);
 -webkit-transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
--moz-transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);;
+-moz-transform:    rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
 }
 
 #pyramid > div:nth-child(2) {
 border-color: transparent transparent transparent rgba(166, 22, 22, 0.6);
 -webkit-transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
--moz-transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
+-moz-transform:    rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
 }
 
 #pyramid > div:nth-child(3) {
 border-color: transparent transparent transparent rgba(166, 22, 22, 0.9);
 -webkit-transform: rotateX(60deg) rotateY(19.5deg);
--moz-transform: rotateX(60deg) rotateY(19.5deg);
+-moz-transform:    rotateX(60deg) rotateY(19.5deg);
 }
 
 #pyramid > div:nth-child(4) {
 border-color: transparent transparent transparent rgba(166, 22, 22, 0.8);
 -webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
--moz-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(327px);
+-moz-transform:    rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
 }
