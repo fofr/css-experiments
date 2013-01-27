@@ -2,58 +2,58 @@
 /* Setup fast transitions */
 
 .mq {
-	-webkit-transition: width 0.001ms;
-	-moz-transition: width 0.001ms;
-	-o-transition: width 0.001ms;
-	transition: width 0.001ms;
-	width: 0;
+    -webkit-transition: width 0.001ms;
+    -moz-transition: width 0.001ms;
+    -o-transition: width 0.001ms;
+    transition: width 0.001ms;
+    width: 0;
 }
 
 /* Extra niceties  */
 /*************************************************/
 
 section {
-width: 640px;
-margin: 0 auto;
-text-shadow: 0 1px 0 #fff;
-text-align: center;
+    width: 640px;
+    margin: 0 auto;
+    text-shadow: 0 1px 0 #fff;
+    text-align: center;
 }
 
 .dynamic {
-font-size: 14px;
-font-weight: normal; 
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .dynamic p {
-margin-bottom: 0;    
+    margin-bottom: 0;
 }
 
 .dynamic p:first-child {
-font-weight: bold;
-margin-bottom: 6px;  
+    font-weight: bold;
+    margin-bottom: 6px;
 }
 
 .dynamic p:nth-child(n+5) {
-opacity: 0.8;    
+    opacity: 0.8;
 }
 
 .dynamic p:nth-child(n+10) {
-opacity: 0.4;    
+    opacity: 0.4;
 }
 
 .dynamic p:nth-child(n+20) {
-opacity: 0.1;    
+    opacity: 0.1;
 }
 
 section h2 {
-font-size: 24px;
-line-height: 36px;
+    font-size: 24px;
+    line-height: 36px;
 }
 
 @media all and (max-width: 740px) {
-	section {
+    section {
         width: auto;
         margin: 20px;
-		-webkit-transition: none; /* make transition event one direction only */
-	}
+        -webkit-transition: none; /* make transition event one direction only */
+    }
 }

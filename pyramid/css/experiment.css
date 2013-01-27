@@ -1,15 +1,24 @@
 #pyramid {
-position: relative;
-margin: 100px auto;
-height: 500px;
-width: 100px;
--webkit-transform-style: preserve-3d;
--webkit-animation: spin 10s linear infinite;
--webkit-transform-origin: 116px 200px 116px;
+    position: relative;
+    margin: 100px auto;
+    height: 500px;
+    width: 100px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: spin 10s linear infinite;
+    -webkit-transform-origin: 116px 200px 116px;
 
--moz-transform-style: preserve-3d;
--moz-animation: spin 10s linear infinite;
--moz-transform-origin: 116px 200px 116px;
+    -moz-transform-style: preserve-3d;
+    -moz-animation: spin 10s linear infinite;
+    -moz-transform-origin: 116px 200px 116px;
+
+    -ms-transform-style: preserve-3d;
+    -ms-animation: spin 10s linear infinite;
+    -ms-transform-origin: 116px 200px 116px;
+
+    transform-style: preserve-3d;
+    animation: spin 10s linear infinite;
+    transform-origin: 116px 200px 116px;
+
 }
 
 @-webkit-keyframes spin {
@@ -30,43 +39,71 @@ width: 100px;
   }
 }
 
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    -ms-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
 #pyramid > div {
-position: absolute;
-border-style: solid;
-border-width: 200px 0 200px 346px;
--webkit-transform-origin: 0 0;
--moz-transform-origin:    0 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 200px 0 200px 346px;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin:    0 0;
+    -ms-transform-origin:     0 0;
+    transform-origin:         0 0;
 }
 
 /* Put some text on each face */
 #pyramid > div:after {
-position: absolute;
-content: "Triangle";
-color: #fff;
-left: -250px;
-text-align: center;
+    position: absolute;
+    content: "Triangle";
+    color: #fff;
+    left: -250px;
+    text-align: center;
 }
 
 #pyramid > div:first-child  {
-border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
--webkit-transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
--moz-transform:    rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
+    border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
+    -webkit-transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
+    -moz-transform:    rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
+    -ms-transform:     rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
+    transform:         rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
 }
 
 #pyramid > div:nth-child(2) {
-border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
--webkit-transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
--moz-transform:    rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
+    border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
+    -webkit-transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
+    -moz-transform:    rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
+    -ms-transform:     rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
+    transform:         rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
 }
 
 #pyramid > div:nth-child(3) {
-border-color: transparent transparent transparent rgba(50, 50, 50, 0.9);
--webkit-transform: rotateX(60deg) rotateY(19.5deg);
--moz-transform:    rotateX(60deg) rotateY(19.5deg);
+    border-color: transparent transparent transparent rgba(50, 50, 50, 0.9);
+    -webkit-transform: rotateX(60deg) rotateY(19.5deg);
+    -moz-transform:    rotateX(60deg) rotateY(19.5deg);
+    -ms-transform:     rotateX(60deg) rotateY(19.5deg);
+    transform:         rotateX(60deg) rotateY(19.5deg);
 }
 
 #pyramid > div:nth-child(4) {
-border-color: transparent transparent transparent rgba(50, 50, 50, 0.8);
--webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
--moz-transform:    rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
+    border-color: transparent transparent transparent rgba(50, 50, 50, 0.8);
+    -webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
+    -moz-transform:    rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
+    -ms-transform:     rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
+    transform:         rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
 }

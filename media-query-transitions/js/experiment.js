@@ -36,14 +36,14 @@ mql = (function(doc, undefined) {
         div.innerHTML = '&shy;<style media="' + q + '"> #' + id + ' { width: 42px; }</style>';
 
         // add transition event listeners
-        div.addEventListener('webkitTransitionEnd', callback, false); 
+        div.addEventListener('webkitTransitionEnd', callback, false);
         div.addEventListener('transitionend', callback, false);       //Firefox
         div.addEventListener('oTransitionEnd', callback, false);      //Opera
 
         docElem.insertBefore(div, refNode);
 
         // original polyfill removes element, we need to keep element for transitions to continue and events to fire.
-        
+
         return {
             matches: div.offsetWidth == 42,
             media: q
