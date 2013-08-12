@@ -24,13 +24,7 @@ $(function(){
     function startClock() {
         var angle = 360/60,
             date = new Date(),
-            hour = (function() {
-                var h = date.getHours();
-                if(h > 12) {
-                    h = h - 12;
-                }
-                return h
-            })(),
+            hour = date.getHours() % 12,
             minute = date.getMinutes(),
             second = date.getSeconds(),
             hourAngle = (360/12) * hour + (360/(12*60)) * minute;
