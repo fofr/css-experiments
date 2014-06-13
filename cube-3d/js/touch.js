@@ -2,7 +2,9 @@ $(function(){
 
     var el = document.createElement('div'),
         transformProps = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' '),
-        transformProp = support(transformProps);
+        transformProp = support(transformProps),
+        transitionDuration = 'transitionDuration WebkitTransitionDuration MozTransitionDuration OTransitionDuration msTransitionDuration'.split(' '),
+        transitionDurationProp = support(transitionDuration);
 
     function support(props) {
         for(var i = 0, l = props.length; i < l; i++) {
@@ -12,55 +14,20 @@ $(function(){
         }
     }
 
-    var $sphere = $('#sphere'),
-        sphere = {
-            rounds: 8,
-            panels: 24,
-            panelWidth: 100,
-            el: $sphere.find('.container'),
-            build: function(p, r) {
-
-                var panels = p || this.panels,
-                    rounds = r || this.rounds,
-                    rotationPerPanel = 360/panels,
-                    rotationPerRound = 360/2/rounds,
-                    yRotation,
-                    xRotation,
-                    width = this.panelWidth,
-                    zTranslate = (width/2) / Math.tan(rotationPerPanel * Math.PI/180),
-                    $container = this.el,
-                    $ul,
-                    $li,
-                    i, j;
-
-                this.el.html('');
-                for(i = 0; i < rounds; i++) {
-                    $ul = $('<ul>');
-                    xRotation = rotationPerRound * i;
-                    $ul[0].style[transformProp] = "rotateX("+ xRotation + "deg)";
-                    for(j = 0; j < panels; j++) {
-                        $li = $('<li>');
-                        yRotation = rotationPerPanel * j;
-                        $li[0].style[transformProp] = "rotateY("+ yRotation +"deg) translateZ("+ zTranslate +"px)";
-                        $ul.append($li);
-                    }
-                    $container.append($ul);
-                }
-            }
-        },
-        mouse = {
+    var mouse = {
             start : {}
         },
         touch = document.ontouchmove !== undefined,
         viewport = {
-            x: 0,
-            y: 0,
-            el: $('#sphere .container')[0],
+            x: -10,
+            y: 20,
+            el: $('.cube')[0],
             move: function(coords) {
                 if(coords) {
                     if(typeof coords.x === "number") this.x = coords.x;
                     if(typeof coords.y === "number") this.y = coords.y;
                 }
+
                 this.el.style[transformProp] = "rotateX("+this.x+"deg) rotateY("+this.y+"deg)";
             },
             reset: function() {
@@ -68,10 +35,15 @@ $(function(){
             }
         };
 
-    sphere.build();
+    viewport.duration = function() {
+        var d = touch ? 50 : 500;
+        viewport.el.style[transitionDurationProp] = d + "ms";
+        return d;
+    }();
 
     $(document).keydown(function(evt) {
-        switch(evt.keyCode) {
+        switch(evt.keyCode)
+        {
             case 37: // left
                 viewport.move({y: viewport.y - 90});
                 break;
@@ -99,6 +71,9 @@ $(function(){
         };
     }).bind('mousedown touchstart', function(evt) {
         delete mouse.last;
+        if($(evt.target).is('a, iframe')) {
+            return true;
+        }
 
         evt.originalEvent.touches ? evt = evt.originalEvent.touches[0] : null;
         mouse.start.x = evt.pageX;
@@ -109,7 +84,7 @@ $(function(){
                 event.preventDefault();
                 // Get touch co-ords
                 event.originalEvent.touches ? event = event.originalEvent.touches[0] : null;
-                $sphere.trigger('move-viewport', {x: event.pageX, y: event.pageY});
+                $('.viewport').trigger('move-viewport', {x: event.pageX, y: event.pageY});
             }
         });
 
@@ -118,7 +93,7 @@ $(function(){
         });
     });
 
-    $sphere.bind('move-viewport', function(evt, movedMouse) {
+    $('.viewport').bind('move-viewport', function(evt, movedMouse) {
 
         // Reduce movement on touch screens
         var movementScaleFactor = touch ? 4 : 1;
@@ -143,13 +118,13 @@ $(function(){
         mouse.last.y = movedMouse.y;
 
         function forward(v1, v2) {
-            return v1 >= v2;
+            return v1 >= v2 ? true : false;
         }
     });
 
-    /* Change sphere style */
-    $('#controls').bind('submit change', function(evt) {
-        evt.preventDefault();
-        $sphere.attr('class','').addClass($(evt.target).val());
-    });
+    /* Just for fun */
+    if(!touch) {
+        $('.cube > div').eq(2).html('<object width="360" height="360"><param name="movie" value="http://www.youtube.com/v/MY5PkidV1cM?fs=1&amp;hl=en_GB&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MY5PkidV1cM?fs=1&amp;hl=en_GB&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="360" height="360"></embed></object>');
+    }
+
 });

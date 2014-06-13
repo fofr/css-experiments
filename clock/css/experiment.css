@@ -4,7 +4,7 @@ Date: 24th March 2009
 Author: Paul Hayes
  */
 
-body.experiment {
+body {
     background: #fff;
 }
 
@@ -12,7 +12,7 @@ body.experiment {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
-    margin: 5em;
+    margin: 0 0 2em;
 }
 
 #clock {
@@ -20,8 +20,7 @@ body.experiment {
     width: 378px;
     height: 378px;
     background-image: url('../images/clockFace.png');
-    left: 50%;
-    margin: 5em 0 0 -189px;
+    margin: 3em auto;
 }
 
 #clock div {

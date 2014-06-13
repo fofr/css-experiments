@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Article: http://www.paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/ -->
+    <!-- Demo: undefined -->
+    <!-- Originally posted: 13th July 2009 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Rotating elements using WebKit Perspective &mdash; Paul Hayes</title>
+    <meta name="author" content="Paul Hayes" />
+    <link rel="canonical" href="undefined" />
+    <link rel="stylesheet" href="../experiment-styles.css" />
+
+    <link rel="stylesheet" href="css/experiment.css" />
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="experiment">
+    <div class="wrapper">
+        <p class="learn">
+            This is a demo, <a href="http://www.paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/">learn how it works</a>.
+        </p>
+<div id="experiment">
+  <div id="perspective" class="perspective">
+    <div class="three-d" id="rotator" style="-webkit-transform: rotateX(0 deg);">
+      Surface
+      <div id="raised">
+        Raised from the surface
+      </div>
+      <div id="bounce">
+        Bounce and rotate.
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/experiment.js"></script>
+</body>
+</html>
