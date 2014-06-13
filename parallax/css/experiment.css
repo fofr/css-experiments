@@ -6,11 +6,11 @@ Author: Paul Hayes
 
 #background {
     background: url('../images/foreground.png') 5% 5%, url('../images/midground.png') 50% 50%, url('../images/background.png') 90% 110%;
-    top: 90px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     -webkit-transition: left 300s linear;
     -moz-transition: left 300s linear;
     -o-transition: left 300s linear;
@@ -27,12 +27,11 @@ Author: Paul Hayes
 }
 
 #content {
-    margin: 3em 10em;
+    margin: 6em 10em;
     background-color: #333;
     opacity: 0.95;
     color: #ccc;
     padding: 3em;
-    position: fixed;
     border: 2px solid #666;
 }
 
@@ -40,4 +39,5 @@ Author: Paul Hayes
     margin: 1em 0;
     font-weight: bold;
     font-size:  26px;
+    color: #fff;
 }

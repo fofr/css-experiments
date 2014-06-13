@@ -4,8 +4,12 @@ Date: 30th April 2009
 Author: Paul Hayes
 */
 
+#experiment {
+    min-height: 1000px;
+}
+
 .cube {
-    position: fixed;
+    position: absolute;
     left: 50%;
     top: 300px;
 }

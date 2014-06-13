@@ -12,9 +12,9 @@
 /* Extra niceties  */
 /*************************************************/
 
-section {
+.listener-output {
     width: 640px;
-    margin: 0 auto;
+    margin: 0 auto 200px;
     text-shadow: 0 1px 0 #fff;
     text-align: center;
 }
@@ -51,7 +51,7 @@ section h2 {
 }
 
 @media all and (max-width: 740px) {
-    section {
+    .listener-output {
         width: auto;
         margin: 20px;
         -webkit-transition: none; /* make transition event one direction only */

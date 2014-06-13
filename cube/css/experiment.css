@@ -4,10 +4,14 @@ Date: 26th March 2009
 Author: Paul Hayes
 */
 
+#experiment {
+    min-height: 500px;
+}
+
 .cube {
     position: absolute;
     left: 50%;
-    top: 300px;
+    top: 250px;
     margin-left: -200px;
 }
 
