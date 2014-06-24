@@ -39,7 +39,6 @@
   -webkit-transform: rotateX(90deg) translateZ(200px);
   -moz-transform: rotateX(90deg) translateZ(200px);
   transform: rotateX(90deg) translateZ(200px);
-
 }
 
 #cube .two {
