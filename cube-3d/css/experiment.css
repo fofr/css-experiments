@@ -1,7 +1,7 @@
 #experiment {
-  -webkit-perspective: 800;
+  -webkit-perspective: 800px;
   -webkit-perspective-origin: 50% 200px;
-  -moz-perspective: 800;
+  -moz-perspective: 800px;
   -moz-perspective-origin: 50% 200px;
   perspective: 800px;
   perspective-origin: 50% 200px;
@@ -14,10 +14,8 @@
   width: 400px;
   -webkit-transition: -webkit-transform 2s linear;
   -webkit-transform-style: preserve-3d;
-
   -moz-transition: -moz-transform 2s linear;
   -moz-transform-style: preserve-3d;
-
   transition: transform 2s linear;
   transform-style: preserve-3d;
 }
