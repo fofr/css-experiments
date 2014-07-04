@@ -17,7 +17,7 @@
 
   -moz-transition: -moz-transform 2s linear;
   -moz-transform-style: preserve-3d;
-  
+
   transition: transform 2s linear;
   transform-style: preserve-3d;
 }
