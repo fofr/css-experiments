@@ -3,14 +3,12 @@ h2 {
 }
 
 .viewport {
-    -webkit-perspective: 800;
+    -webkit-perspective: 800px;
     -webkit-perspective-origin: 50% 200px;
     -webkit-transform: scale(0.75,0.75);
-
-    -moz-perspective: 800;
+    -moz-perspective: 800px;
     -moz-perspective-origin: 50% 200px;
     -moz-transform: scale(0.75,0.75);
-
     perspective: 800px;
     perspective-origin: 50% 200px;
     transform: scale(0.75,0.75);
@@ -24,11 +22,9 @@ h2 {
     -webkit-transition: -webkit-transform 50ms linear;
     -webkit-transform-style: preserve-3d;
     -webkit-transform: rotateX(-10deg) rotateY(20deg);
-
     -moz-transition: -moz-transform 50ms linear;
     -moz-transform-style: preserve-3d;
     -moz-transform: rotateX(-10deg) rotateY(20deg);
-
     transition: transform 50ms linear;
     transform-style: preserve-3d;
     transform: rotateX(-10deg) rotateY(20deg);
@@ -107,25 +103,4 @@ object {
 
 object:hover {
     opacity: 1;
-}
-
-/* Zoom and blur experiment */
-/* As of June 10th 2012: filters are webkit only */
-/*************************************************/
-
-.zoom-wrapper {
-    -webkit-animation: zoom-in 5s linear infinite alternate;
-    -webkit-filter: blur(0);
-    -webkit-transform-style: preserve-3d;
-}
-
-@-webkit-keyframes zoom-in {
-    from {
-        -webkit-transform: translateZ(-1000px);
-        -webkit-filter: blur(3px);
-    }
-    to {
-        -webkit-transform: translateZ(100px);
-        -webkit-filter: blur(0);
-    }
 }

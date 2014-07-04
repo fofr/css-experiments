@@ -55,5 +55,7 @@ section h2 {
         width: auto;
         margin: 20px;
         -webkit-transition: none; /* make transition event one direction only */
+        -moz-transition: none;
+        transition: none;
     }
 }

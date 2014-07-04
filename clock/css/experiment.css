@@ -42,7 +42,7 @@ body {
     -moz-transform: rotate(3600000deg);
     -o-transform: rotate(3600000deg);
     -ms-transform: rotate(3600000deg);
-    -transform: rotate(3600000deg);
+    transform: rotate(3600000deg);
 }
 
 #clock img[src*='minute'] {

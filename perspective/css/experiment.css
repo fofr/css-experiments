@@ -2,7 +2,9 @@
   font-size: 150%;
   margin: 6em auto;
   width: 6em;
-  -webkit-perspective: 500;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  perspective: 500px;
 }
 
 .three-d {
@@ -11,16 +13,22 @@
   text-align:center;
   background-color: #ccc;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 #raised {
   -webkit-transform: translateZ(4em);
-   background-color: #aaa;
+  -moz-transform: translateZ(4em);
+  transform: translateZ(4em);
+  background-color: #aaa;
 }
 
 #bounce {
   -webkit-transform: translateZ(1em);
-   background-color: #999;
+  -moz-transform: translateZ(1em);
+  transform: translateZ(1em);
+  background-color: #999;
 }
 
 #perspective div {

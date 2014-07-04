@@ -37,6 +37,7 @@
     /* Default minimise animation */
     -webkit-animation: minimise 500ms linear;
     -moz-animation: minimise 500ms linear;
+    animation: minimise 500ms linear;
 
     /* Prettify */
     padding: 30px;
@@ -46,6 +47,7 @@
     background: -moz-linear-gradient(#fff, #ccc);
     background: -webkit-linear-gradient(#fff, #ccc);
     background: -o-linear-gradient(#fff, #ccc);
+    background: linear-gradient(#fff, #ccc);
     text-shadow: 0 1px 0 #fff;
 }
 
@@ -53,6 +55,7 @@
 .modal:target > div {
     -webkit-animation-name: bounce;
     -moz-animation-name: bounce;
+    animation-name: bounce;
 }
 
 .modal h2 {
@@ -116,6 +119,34 @@
   }
 }
 
+@keyframes bounce {
+  0% {
+    transform: scale3d(0.1,0.1,1);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+  55% {
+    transform: scale3d(1.08,1.08,1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0);
+  }
+  75% {
+    transform: scale3d(0.95,0.95,1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  }
+  100% {
+    transform: scale3d(1,1,1);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+}
+
+@keyframes minimise {
+  0% {
+    transform: scale3d(1,1,1);
+  }
+  100% {
+    transform: scale3d(0.1,0.1,1);
+  }
+}
+
 /* Modal close link */
 .modal a[href="#close"] {
     position: absolute;
@@ -157,6 +188,7 @@
     .modal a[href="#close"]:hover:after {
     -webkit-transform: scale(1.1,1.1);
     -moz-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
 }
 
 .modal a[href="#close"]:focus:after {
@@ -176,6 +208,7 @@ a.openModal {
     background: -moz-linear-gradient(#fff, #ddd);
     background: -webkit-linear-gradient(#fff, #ddd);
     background: -o-linear-gradient(#fff, #ddd);
+    background: linear-gradient(#fff, #ddd);
     text-shadow: 0 1px 0 #fff;
     border: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 1px 1px rgba(0,0,0,0.3);
@@ -186,4 +219,5 @@ a.openModal:focus {
     background: -moz-linear-gradient(#fff, #ccc);
     background: -webkit-linear-gradient(#fff, #ccc);
     background: -o-linear-gradient(#fff, #ccc);
+    background: linear-gradient(#fff, #ccc);
 }
