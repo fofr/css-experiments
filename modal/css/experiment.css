@@ -41,14 +41,8 @@
 
     /* Prettify */
     padding: 30px;
-    border-radius: 7px;
     box-shadow: 0 3px 20px rgba(0,0,0,0.9);
     background: #fff;
-    background: -moz-linear-gradient(#fff, #ccc);
-    background: -webkit-linear-gradient(#fff, #ccc);
-    background: -o-linear-gradient(#fff, #ccc);
-    background: linear-gradient(#fff, #ccc);
-    text-shadow: 0 1px 0 #fff;
 }
 
 /* Override animation on modal open */
@@ -182,10 +176,10 @@
     border: 3px solid #fff;
     border-radius: 20px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    }
+}
 
-    .modal a[href="#close"]:focus:after,
-    .modal a[href="#close"]:hover:after {
+.modal a[href="#close"]:focus:after,
+.modal a[href="#close"]:hover:after {
     -webkit-transform: scale(1.1,1.1);
     -moz-transform: scale(1.1,1.1);
     transform: scale(1.1,1.1);
@@ -200,24 +194,13 @@ a.openModal {
     margin: 1em auto;
     display: block;
     width: 200px;
-    background: #ccc;
     text-align: center;
     padding: 10px;
-    border-radius: 7px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #ddd);
-    background: -webkit-linear-gradient(#fff, #ddd);
-    background: -o-linear-gradient(#fff, #ddd);
-    background: linear-gradient(#fff, #ddd);
-    text-shadow: 0 1px 0 #fff;
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    background: #3e916e;
+    color: #fff;
 }
 
 a.openModal:hover,
 a.openModal:focus {
-    background: -moz-linear-gradient(#fff, #ccc);
-    background: -webkit-linear-gradient(#fff, #ccc);
-    background: -o-linear-gradient(#fff, #ccc);
-    background: linear-gradient(#fff, #ccc);
+    background: #22523e;
 }

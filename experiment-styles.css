@@ -135,9 +135,8 @@ body {
     font-size: 1em;
     line-height: 1.5em;  /* 16px/24px default */
     color: #666;
-    background: #f1ebe2;
+    background: #fff;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 200;
 }
 
 textarea, .sans {
@@ -145,7 +144,7 @@ textarea, .sans {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 200;
+    font-weight: bold;
 }
 
 p, ul, ol, dl, table, address, .r {
@@ -192,7 +191,7 @@ ul ul, ol ol, ol ul, ul ol, dl dl, dl ul, dl ol, ul dl, ol dl {
 }
 
 a {
-    color: #333;
+    color: #000;
 }
 
 a:visited {
@@ -212,9 +211,16 @@ a:active {
 }
 
 .experiment .learn {
+    color: #fff;
     text-align: center;
-    background: #fff;
-    margin-bottom: 24px;
-    padding: 12px 0;
-    border-bottom: 1px solid #ccc;
+    background: #000;
+    margin-bottom: 36px;
+    padding: 24px 0;
+    border-bottom: 10px solid #3e916e;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.experiment .learn a {
+    color: #fff;
 }

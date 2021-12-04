@@ -1,3 +1,8 @@
+body {
+  background: #eee;
+  text-align: center;
+}
+
 #sphere {
     width: 100px;
     height: 100px;
@@ -246,12 +251,13 @@
 
 #controls {
     position: absolute;
-    left: 48px;
-    top: 48px;
+    left: 148px;
+    top: 148px;
+    text-align: left;
 }
 
 #controls fieldset {
-    border: 1px dotted #000;
+    border: 1px solid #000;
     padding: 0.5em 1em 0 0.5em;
 }
 
