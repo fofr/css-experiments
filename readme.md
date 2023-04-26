@@ -1,5 +1,5 @@
-# paulrhayes.com Experiments
-CSS, JS and HTML experiments from https://www.paulrhayes.com/, since 2009.
+# CSS experiments
+CSS, JS and HTML experiments circa 2009–2012.
 
 ## Includes
 - 3D CSS cube, tetrahedron and sphere
